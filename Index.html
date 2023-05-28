@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--link para icono del menu
+    lo hemos copiado de boxicons-->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Ejemplo web responsive</title>
+</head>
+<body>
+    <!--container:caja principal que contendra todos los elementos de mi pagina web-->
+    <div class="container">
+        <!-- header:contendrá el título de la página web (e incluso, puede tener un logo y un menu de navegación representado 
+        en una etiqueta nav) -->
+        <header class="rojo">
+            <h1>ANIMALES DOMÉSTICOS</h1>
+            <nav>
+            <DIV class="icon"><i class='bx bx-menu'></i></DIV>
+            <DIV class="menu_item">Inicio</DIV>
+            <DIV class="menu_item">Proyectos</DIV>
+            <DIV class="menu_item">Contacto</DIV>
+        </nav>
+        </header>
+        <!-- main:caja que contendrá las secciones más importantes de mi web:las img y el texto explicativo de la web. -->
+        <main>
+            <section class="main_text">
+            <div>
+            <h1 class="rojo">Proyecto Ejemplo web responsive para 1ºDAW</h1>
+            <h3>Diseño responsive</h3>
+            </div>
+            <div>
+                <p>Página web responsive creada durante nuestras clases de los lunes de lenguaje de marcas</p>
+                <p>Establecemos dos puntos de breakspoints , uno a 576px y otro a 992px en los que, se producen cambios de layout</p>
+                <p>El proceso de desarrollo se ha llevado a cabo empezando desde el diseño para pantallas pequeñas hasta más grandes</p>
+            </div>
+            </section>
+            <section>
+                <section class="image">
+                    <img src="IMG/foto1.jfif" alt="">
+                    <img src="IMG/foto2.jfif" alt="">
+                    <img src="IMG/foto3.jfif" alt="">
+                    <img src="IMG/foto4.jfif" alt="">
+                    <img src="IMG/foto5.jfif" alt="">
+                    <img src="IMG/foto6.jfif" alt="">
+                    <img src="IMG/foto7.jfif" alt="">
+                    <img src="IMG/foto8.jfif" alt="">
+                    <img class="hidden" src="IMG/foto9.jfif" alt="">
+                </section>
+            </section>
+
+        </main>
+        <!-- section.caja que contendrá articulos o noticias relevantes -->
+        <section class="novedades">
+            <h2 class="rojo"></h2>
+            <article>
+                <h3>27 de febrero de 2023</h3>
+                <h4>Información CFGS DAW</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquam ullam laboriosam distinctio dicta quasi unde sit quia sed! Iusto quisquam aperiam voluptatum iure ab, recusandae excepturi voluptates repudiandae laudantium.</p>
+            </article>
+            <article>
+                <h3>27 de febrero de 2023</h3>
+                <h4>Información CFGS DAW</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquam ullam laboriosam distinctio dicta quasi unde sit quia sed! Iusto quisquam aperiam voluptatum iure ab, recusandae excepturi voluptates repudiandae laudantium.</p>
+            </article>
+            <article>
+                <h3>27 de febrero de 2023</h3>
+                <h4>Información CFGS DAW</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquam ullam laboriosam distinctio dicta quasi unde sit quia sed! Iusto quisquam aperiam voluptatum iure ab, recusandae excepturi voluptates repudiandae laudantium.</p>
+            </article>
+        </section>
+    </div>
+
+    <script>
+               /*Icono del menu. Vamos a darle funcionalidad para hacer que se oculte o aparezca según el tamaño de la ventana*/
+               $(function(){
+            //Captura del evento para mostrar u ocultar el menu
+            $(".icon").click(function(){
+                $(".menu_item").toggle();
+            });
+            $(window).resize(function(){
+                var anchura = $(this).width();
+                if(anchura > 576){
+                    $(".menu_item").show();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
